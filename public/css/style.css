@@ -1,0 +1,146 @@
+/* Portal Conselhos Tutelares — Estilos Base */
+
+:root {
+  --azul-profundo: #0F2C59;
+  --azul-claro: #1E5BB8;
+  --laranja: #E76F00;
+  --laranja-escuro: #C4540B;
+  --laranja-suave: #FFF1E0;
+  --creme: #FAF7F2;
+  --branco: #FFFFFF;
+  --texto: #1A1A1A;
+  --texto-suave: #5C5C5C;
+  --borda: #E8E4DC;
+  --fonte-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --fonte-corpo: 'DM Sans', system-ui, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--fonte-corpo);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--texto);
+  background: var(--creme);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--fonte-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--azul-profundo);
+  line-height: 1.2;
+}
+
+a { color: var(--azul-claro); text-decoration: none; }
+
+:focus-visible {
+  outline: 3px solid var(--laranja);
+  outline-offset: 2px;
+}
+
+.header {
+  background: var(--azul-profundo);
+  color: var(--branco);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-logo {
+  width: 40px;
+  height: 40px;
+  background: var(--laranja);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: var(--fonte-display);
+}
+
+.header-info { flex: 1; }
+.header-info .nome { font-weight: 600; font-size: 15px; }
+.header-info .local { font-size: 12px; opacity: 0.75; }
+
+.menu-btn {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: white;
+  border-radius: 1px;
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  max-width: 85vw;
+  height: 100vh;
+  background: var(--branco);
+  z-index: 201;
+  padding: 24px;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+}
+
+.menu-overlay.aberto { opacity: 1; pointer-events: auto; }
+.menu-lateral.aberto { right: 0; }
+
+.menu-fechar {
+  background: var(--creme);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.menu-lateral nav a {
+  display: block;
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--texto);
+  border-bottom: 1px solid var(--borda);
+}
