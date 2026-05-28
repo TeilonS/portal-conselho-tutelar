@@ -1,0 +1,37 @@
+# Logs
+*.log
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# Firebase cache
+.firebase/
+
+# Dependências
+node_modules/
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ambiente local
+.env
+.env.local
+
+# Evidências acadêmicas (não devem ir pro repo público)
+_evidencias_extensao/
+*.pdf
+
+# Backups locais
+*.atual
+*.backup
+public.atual/
