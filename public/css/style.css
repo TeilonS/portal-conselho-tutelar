@@ -144,3 +144,118 @@ a { color: var(--azul-claro); text-decoration: none; }
   color: var(--texto);
   border-bottom: 1px solid var(--borda);
 }
+
+/* HERO */
+.hero {
+  padding: 36px 24px 32px;
+  background: linear-gradient(180deg, var(--creme) 0%, var(--branco) 100%);
+}
+
+.hero-tag {
+  display: inline-block;
+  background: var(--laranja-suave);
+  color: var(--laranja);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 7vw, 36px);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.hero p.lead {
+  color: var(--texto-suave);
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+
+/* BOTÕES */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 18px 24px;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--fonte-corpo);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.1s, box-shadow 0.2s;
+  margin-bottom: 10px;
+}
+
+.btn:active { transform: scale(0.98); }
+
+.btn-primario {
+  background: var(--laranja);
+  color: var(--branco);
+  box-shadow: 0 8px 24px rgba(231, 111, 0, 0.3);
+}
+
+.btn-primario:hover, .btn-primario:focus-visible {
+  background: var(--laranja-escuro);
+  text-decoration: none;
+}
+
+.btn-secundario {
+  background: var(--branco);
+  color: var(--azul-profundo);
+  border: 2px solid var(--azul-profundo);
+}
+
+.btn-secundario:hover, .btn-secundario:focus-visible {
+  background: var(--azul-profundo);
+  color: var(--branco);
+  text-decoration: none;
+}
+
+/* COMO FUNCIONA */
+.como-funciona {
+  padding: 32px 24px;
+  background: var(--azul-profundo);
+  color: var(--branco);
+}
+
+.como-funciona h2 {
+  font-size: 22px;
+  margin-bottom: 24px;
+  color: var(--branco);
+}
+
+.passo {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.passo-num {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--laranja);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: var(--fonte-display);
+  font-size: 17px;
+}
+
+.passo-texto {
+  font-size: 15px;
+  padding-top: 8px;
+  opacity: 0.95;
+}
