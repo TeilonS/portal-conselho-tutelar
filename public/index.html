@@ -106,6 +106,25 @@
 
   </main>
 
+  <footer class="rodape">
+    <strong>Conselho Tutelar</strong>
+    <div class="rodape-linha">
+      <div class="label">Endereço</div>
+      <div>A ser preenchido após visita à instituição</div>
+    </div>
+    <div class="rodape-linha">
+      <div class="label">Funcionamento</div>
+      <div>Segunda a Sexta — 8h às 17h</div>
+    </div>
+    <div class="rodape-linha">
+      <div class="label">Disque Denúncia Nacional</div>
+      <div><a href="tel:100">100</a> — Disque Direitos Humanos</div>
+    </div>
+    <div class="rodape-linha" style="margin-top: 16px; opacity: 0.5; font-size: 11px;">
+      Projeto de Extensão Universitária — Uniasselvi
+    </div>
+  </footer>
+
   <script>
     const abrirMenu = document.getElementById('abrirMenu');
     const fecharMenu = document.getElementById('fecharMenu');
@@ -115,16 +134,22 @@
     function abrir() {
       menuLateral.classList.add('aberto');
       menuOverlay.classList.add('aberto');
+      menuLateral.setAttribute('aria-hidden', 'false');
     }
 
     function fechar() {
       menuLateral.classList.remove('aberto');
       menuOverlay.classList.remove('aberto');
+      menuLateral.setAttribute('aria-hidden', 'true');
     }
 
     abrirMenu.addEventListener('click', abrir);
     fecharMenu.addEventListener('click', fechar);
     menuOverlay.addEventListener('click', fechar);
+
+    document.querySelectorAll('.menu-lateral nav a').forEach(link => {
+      link.addEventListener('click', fechar);
+    });
   </script>
 
 </body>
