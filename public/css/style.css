@@ -259,3 +259,93 @@ a { color: var(--azul-claro); text-decoration: none; }
   padding-top: 8px;
   opacity: 0.95;
 }
+
+/* SEÇÕES E CARDS */
+.secao {
+  padding: 32px 24px;
+}
+
+.secao h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, transform 0.1s;
+}
+
+.card:hover, .card:focus-visible {
+  border-color: var(--azul-claro);
+  text-decoration: none;
+  transform: translateX(2px);
+}
+
+.card .icone {
+  width: 48px;
+  height: 48px;
+  background: var(--laranja-suave);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.card .conteudo { flex: 1; }
+
+.card .titulo {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--azul-profundo);
+  margin-bottom: 2px;
+}
+
+.card .subtitulo {
+  font-size: 13px;
+  color: var(--texto-suave);
+}
+
+.card .seta {
+  color: var(--azul-claro);
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+/* CAMPANHA */
+.campanha {
+  background: linear-gradient(135deg, var(--laranja) 0%, var(--laranja-escuro) 100%);
+  color: var(--branco);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 0 24px 32px;
+  box-shadow: 0 8px 24px rgba(15, 44, 89, 0.10);
+}
+
+.campanha small {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+.campanha h3 {
+  font-size: 24px;
+  margin: 10px 0 12px;
+  line-height: 1.2;
+  color: var(--branco);
+}
+
+.campanha p { font-size: 14px; opacity: 0.95; }
