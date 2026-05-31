@@ -1,8 +1,10 @@
 /* Portal Conselhos Tutelares — Estilos Base */
 
 :root {
-  --azul-profundo: #0F2C59;
-  --azul-claro: #1E5BB8;
+  --azul-profundo: #1E4978;
+  --azul-claro: #4A7BA8;
+  --amarelo-dourado: #F4D03F;
+  --amarelo-suave: #FEF8E0;
   --laranja: #E76F00;
   --laranja-escuro: #C4540B;
   --laranja-suave: #FFF1E0;
@@ -352,7 +354,7 @@ a { color: var(--azul-claro); text-decoration: none; }
 
 /* RODAPÉ */
 .rodape {
-  background: #0A1F40;
+  background: #163558;
   color: var(--branco);
   padding: 28px 24px;
   font-size: 14px;
