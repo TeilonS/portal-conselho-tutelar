@@ -401,3 +401,109 @@ a { color: var(--azul-claro); text-decoration: none; }
     margin-right: 48px;
   }
 }
+
+/* CANAIS DE DENÚNCIA */
+.canais-intro {
+  color: var(--texto-suave);
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.canais-intro strong { color: var(--azul-profundo); }
+
+.subsecao {
+  font-size: 17px;
+  color: var(--azul-profundo);
+  margin: 28px 0 14px;
+  font-weight: 600;
+}
+
+.canal-destaque {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: linear-gradient(135deg, var(--laranja) 0%, var(--laranja-escuro) 100%);
+  color: var(--branco);
+  padding: 22px 24px;
+  border-radius: 16px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(15, 44, 89, 0.10);
+  transition: transform 0.1s;
+}
+
+.canal-destaque:hover, .canal-destaque:focus-visible {
+  text-decoration: none;
+  transform: translateY(-2px);
+  color: var(--branco);
+}
+
+.canal-destaque:active { transform: scale(0.98); }
+
+.canal-destaque-numero {
+  font-family: var(--fonte-display);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.canal-destaque-info { flex: 1; }
+
+.canal-destaque-info strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.canal-destaque-info span {
+  font-size: 13px;
+  opacity: 0.95;
+}
+
+.canal-lista {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.canal-item {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--borda);
+}
+
+.canal-item:last-child { border-bottom: none; }
+
+.canal-zona {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--azul-profundo);
+  margin-bottom: 6px;
+}
+
+.canal-telefones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.canal-telefones a {
+  display: inline-block;
+  background: var(--laranja-suave);
+  color: var(--laranja);
+  padding: 8px 14px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.canal-telefones a:hover, .canal-telefones a:focus-visible {
+  background: var(--laranja);
+  color: var(--branco);
+  text-decoration: none;
+}
+
+section[id] { scroll-margin-top: 80px; }
