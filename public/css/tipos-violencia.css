@@ -1,0 +1,251 @@
+/* ============================================
+   Página: Tipos de Violência
+   ============================================ */
+
+/* ÍNDICE NAVEGÁVEL */
+.indice-violencia {
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+
+.indice-titulo {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--texto-suave);
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.indice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.indice-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 10px;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--azul-profundo);
+  transition: border-color 0.2s, transform 0.1s;
+  text-align: center;
+  min-height: 90px;
+}
+
+.indice-item:hover, .indice-item:focus-visible {
+  border-color: var(--laranja);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.indice-icone {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.indice-nome {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ARTIGO DE CADA TIPO */
+.tipo-violencia {
+  padding: 32px 24px;
+  border-top: 1px solid var(--borda);
+  background: var(--branco);
+}
+
+.tipo-violencia:nth-child(even) {
+  background: var(--creme);
+}
+
+.tipo-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.tipo-icone {
+  width: 56px;
+  height: 56px;
+  background: var(--laranja-suave);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.tipo-cabecalho h2 {
+  font-size: 26px;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.tipo-descricao {
+  font-size: 16px;
+  color: var(--texto);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.tipo-descricao strong {
+  color: var(--azul-profundo);
+}
+
+/* BLOCOS DE CONTEÚDO */
+.tipo-bloco {
+  margin-bottom: 20px;
+}
+
+.tipo-bloco h3 {
+  font-size: 17px;
+  color: var(--azul-profundo);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.lista-sinais {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-sinais li {
+  position: relative;
+  padding: 10px 0 10px 28px;
+  font-size: 15px;
+  color: var(--texto);
+  line-height: 1.5;
+  border-bottom: 1px solid var(--borda);
+}
+
+.lista-sinais li:last-child {
+  border-bottom: none;
+}
+
+.lista-sinais li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 18px;
+  width: 16px;
+  height: 16px;
+  background: var(--laranja);
+  border-radius: 50%;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/contain no-repeat;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+.lista-sinais li strong {
+  color: var(--azul-profundo);
+}
+
+/* BLOCO DE DESTAQUE */
+.tipo-bloco-destaque {
+  background: var(--laranja-suave);
+  border-left: 4px solid var(--laranja);
+  padding: 16px 18px;
+  border-radius: 0 12px 12px 0;
+  margin-bottom: 20px;
+}
+
+.tipo-bloco-destaque h3 {
+  font-size: 15px;
+  color: var(--laranja-escuro);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.tipo-bloco-destaque p {
+  font-size: 14px;
+  color: var(--texto);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.tipo-bloco-destaque p:last-child {
+  margin-bottom: 0;
+}
+
+.tipo-bloco-destaque strong {
+  color: var(--azul-profundo);
+}
+
+.tipo-bloco-destaque a {
+  color: var(--laranja-escuro);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* BLOCO LEGAL */
+.tipo-bloco-legal {
+  background: var(--verde-suave);
+  border-left: 4px solid var(--verde-seguro);
+  padding: 14px 18px;
+  border-radius: 0 12px 12px 0;
+  font-size: 13px;
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+.tipo-bloco-legal strong {
+  color: var(--verde-seguro);
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* CTA FINAL */
+.cta-denuncia {
+  background: linear-gradient(135deg, var(--azul-profundo) 0%, #1A3A6E 100%);
+  color: var(--branco);
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.cta-denuncia h2 {
+  color: var(--branco);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cta-denuncia p {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+/* Scroll offset para âncoras */
+.tipo-violencia {
+  scroll-margin-top: 70px;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .tipo-violencia {
+    padding: 48px 48px;
+  }
+
+  .tipo-cabecalho h2 {
+    font-size: 32px;
+  }
+
+  .indice-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
