@@ -35,3 +35,4 @@ _evidencias_extensao/
 *.atual
 *.backup
 public.atual/
+public/js/firebase-keys.js
