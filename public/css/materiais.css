@@ -1,0 +1,106 @@
+/* ============================================
+   Página: Materiais Educativos
+   ============================================ */
+
+.materiais-intro {
+  font-size: 15px;
+  color: var(--texto-suave);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.materiais-grupo {
+  font-size: 18px;
+  color: var(--azul-profundo);
+  margin: 28px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--borda);
+  font-weight: 600;
+}
+
+.materiais-grupo:first-of-type {
+  margin-top: 0;
+}
+
+.material-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, transform 0.1s;
+}
+
+.material-card:hover, .material-card:focus-visible {
+  border-color: var(--azul-claro);
+  text-decoration: none;
+  transform: translateX(2px);
+}
+
+/* Selos institucionais */
+.material-selo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  font-family: var(--fonte-display);
+  font-weight: 700;
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.1;
+  color: var(--branco);
+  padding: 4px;
+}
+
+.material-selo.unicef { background: #1CABE2; }
+.material-selo.childhood { background: #E94B86; }
+.material-selo.safernet { background: #2E7D32; }
+.material-selo.governo { background: #0F4C81; }
+
+.material-conteudo {
+  flex: 1;
+  min-width: 0;
+}
+
+.material-titulo {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--azul-profundo);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.material-descricao {
+  display: block;
+  font-size: 13px;
+  color: var(--texto-suave);
+  line-height: 1.5;
+}
+
+.material-acao {
+  color: var(--azul-claro);
+  font-size: 20px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* Responsivo Desktop */
+@media (min-width: 768px) {
+  .material-selo {
+    width: 72px;
+    height: 72px;
+    font-size: 12px;
+  }
+
+  .material-titulo { font-size: 16px; }
+  .material-descricao { font-size: 14px; }
+}
