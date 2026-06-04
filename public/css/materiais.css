@@ -2,13 +2,6 @@
    Página: Materiais Educativos
    ============================================ */
 
-.materiais-intro {
-  font-size: 15px;
-  color: var(--texto-suave);
-  margin-bottom: 24px;
-  line-height: 1.6;
-}
-
 .materiais-grupo {
   font-size: 18px;
   color: var(--azul-profundo);
@@ -40,6 +33,26 @@
   border-color: var(--azul-claro);
   text-decoration: none;
   transform: translateX(2px);
+}
+
+/* Destaque para conteúdo local (VC) */
+.material-card.destaque-vca {
+  background: var(--laranja-suave);
+  border-color: var(--laranja);
+  border-width: 2px;
+}
+
+.material-badge {
+  display: inline-block;
+  background: var(--laranja);
+  color: var(--branco);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
 }
 
 /* Selos institucionais */
