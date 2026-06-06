@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Notícias e campanhas dos Conselhos Tutelares de Vitória da Conquista.">
+  <title>Notícias e Campanhas — Conselhos Tutelares VCA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/noticias.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-logo" aria-hidden="true">CT</div>
+    <div class="header-info">
+      <div class="nome">Conselhos Tutelares</div>
+      <div class="local">Vitória da Conquista — BA</div>
+    </div>
+    <button class="menu-btn" aria-label="Abrir menu" id="abrirMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <aside class="menu-lateral" id="menuLateral" aria-hidden="true">
+    <button class="menu-fechar" aria-label="Fechar menu" id="fecharMenu">×</button>
+    <nav>
+      <a href="/">Início</a>
+      <a href="/tipos-violencia">Tipos de Violência</a>
+      <a href="/#canais">Canais de Denúncia</a>
+      <a href="/materiais">Materiais Educativos</a>
+      <a href="/faq">Perguntas Frequentes</a>
+      <a href="/noticias">Notícias e Campanhas</a>
+      <a href="/contato">Contato</a>
+    </nav>
+  </aside>
+
+  <main>
+
+    <section class="section-header">
+      <a href="/" class="voltar">← Voltar ao início</a>
+      <h1>Notícias e Campanhas</h1>
+      <p>Acompanhe atualizações sobre o trabalho dos Conselhos Tutelares e campanhas educativas.</p>
+    </section>
+
+    <section class="secao">
+      <div id="noticias-container" class="noticias-lista">
+        <div class="faq-loading">
+          <div class="loading-spinner"></div>
+          <span>Carregando notícias...</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <strong>Conselhos Tutelares de Vitória da Conquista</strong>
+    <div class="rodape-linha">
+      <div class="label">Disque Denúncia Nacional</div>
+      <div><a href="tel:100">100</a> — Disque Direitos Humanos</div>
+    </div>
+    <div class="rodape-linha" style="margin-top: 16px; opacity: 0.5; font-size: 11px;">
+      Projeto de Extensão Universitária — Uniasselvi
+    </div>
+  </footer>
+
+  <script type="module" src="/js/noticias.js"></script>
+  <script>
+    const abrirMenu = document.getElementById('abrirMenu');
+    const fecharMenu = document.getElementById('fecharMenu');
+    const menuLateral = document.getElementById('menuLateral');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    function abrir() {
+      menuLateral.classList.add('aberto');
+      menuOverlay.classList.add('aberto');
+      menuLateral.setAttribute('aria-hidden', 'false');
+    }
+
+    function fechar() {
+      menuLateral.classList.remove('aberto');
+      menuOverlay.classList.remove('aberto');
+      menuLateral.setAttribute('aria-hidden', 'true');
+    }
+
+    abrirMenu.addEventListener('click', abrir);
+    fecharMenu.addEventListener('click', fechar);
+    menuOverlay.addEventListener('click', fechar);
+
+    document.querySelectorAll('.menu-lateral nav a').forEach(link => {
+      link.addEventListener('click', fechar);
+    });
+  </script>
+
+</body>
+</html>
