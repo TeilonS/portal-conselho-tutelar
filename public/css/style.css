@@ -566,3 +566,10 @@ section[id] { scroll-margin-top: 80px; }
   opacity: 0.9;
   margin-bottom: 24px;
 }
+
+/* Ícone do header */
+.header-logo img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
