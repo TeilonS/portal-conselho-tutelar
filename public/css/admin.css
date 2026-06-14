@@ -296,3 +296,317 @@
 [hidden] {
   display: none !important;
 }
+/* ============================================
+   CRUD ADMIN — Listagem e Formulário
+   Adicionar ao FINAL de public/css/admin.css
+   ============================================ */
+
+/* VOLTAR (botão seta no header admin) */
+.admin-voltar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--branco);
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.admin-voltar:hover {
+  background: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  color: var(--branco);
+}
+
+/* TOOLBAR (título + botão novo) */
+.admin-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.admin-toolbar h1 {
+  font-size: 24px;
+  color: var(--azul-profundo);
+  margin: 0;
+}
+
+.btn-novo {
+  width: auto;
+  min-width: auto;
+  padding: 12px 20px;
+  font-size: 14px;
+}
+
+/* ITEM DA LISTA ADMIN */
+.lista-admin {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item-admin {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.item-admin-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.item-admin-data {
+  font-size: 12px;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-ativo {
+  background: var(--verde-suave, #E8F5EE);
+  color: var(--verde-seguro, #1F7A4D);
+}
+
+.badge-inativo {
+  background: #F0F0F0;
+  color: var(--texto-suave);
+}
+
+.item-admin-titulo {
+  font-size: 17px;
+  color: var(--azul-profundo);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.item-admin-resumo {
+  font-size: 14px;
+  color: var(--texto-suave);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.item-admin-acoes {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-acao {
+  flex: 1;
+  min-width: 140px;
+  padding: 10px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid var(--borda);
+  background: var(--branco);
+  color: var(--texto);
+  font-family: var(--fonte-corpo);
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn-acao:hover, .btn-acao:focus-visible {
+  background: var(--creme);
+  border-color: var(--azul-claro);
+  text-decoration: none;
+}
+
+.btn-acao:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-editar:hover {
+  border-color: var(--laranja);
+  color: var(--laranja);
+}
+
+/* FORMULÁRIO */
+.contador-caracteres {
+  text-align: right;
+  font-size: 12px;
+  color: var(--texto-suave);
+  margin-top: 4px;
+}
+
+.obrigatorio {
+  color: var(--laranja);
+}
+
+.campo-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 15px;
+  color: var(--texto);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--laranja);
+}
+
+/* AJUDA DA IMAGEM */
+.btn-ajuda {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--laranja-suave);
+  color: var(--laranja);
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--fonte-display);
+  margin-left: 6px;
+  font-size: 13px;
+}
+
+.btn-ajuda:hover {
+  background: var(--laranja);
+  color: var(--branco);
+}
+
+.ajuda-box {
+  background: var(--laranja-suave);
+  border-left: 4px solid var(--laranja);
+  border-radius: 0 12px 12px 0;
+  padding: 14px 18px;
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--texto);
+}
+
+.ajuda-box strong {
+  display: block;
+  color: var(--laranja-escuro);
+  margin-bottom: 8px;
+}
+
+.ajuda-box ol {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.ajuda-box li {
+  margin-bottom: 4px;
+}
+
+.ajuda-box a {
+  color: var(--laranja-escuro);
+  font-weight: 600;
+}
+
+/* AÇÕES DO FORMULÁRIO */
+.form-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--borda);
+}
+
+.form-acoes .btn {
+  flex: 1;
+  min-width: 140px;
+  width: auto;
+}
+
+.btn-cancelar {
+  flex: 1;
+  min-width: 140px;
+  padding: 18px 24px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  background: transparent;
+  color: var(--texto-suave);
+  text-align: center;
+  text-decoration: none;
+  border: 1px dashed var(--borda);
+}
+
+.btn-cancelar:hover {
+  background: var(--creme);
+  color: var(--texto);
+  text-decoration: none;
+}
+
+/* PREVIEW */
+.aviso-preview {
+  background: var(--azul-claro);
+  color: var(--branco);
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .item-admin {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .item-admin-conteudo {
+    flex: 1;
+  }
+
+  .item-admin-acoes {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    min-width: 180px;
+  }
+
+  .btn-acao {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .form-acoes .btn,
+  .btn-cancelar {
+    flex: none;
+    min-width: 180px;
+  }
+}

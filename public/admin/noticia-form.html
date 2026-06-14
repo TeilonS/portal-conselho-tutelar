@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Notícia — Painel Administrativo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/noticias.css">
+</head>
+<body class="admin-body">
+
+  <div id="auth-loading" class="auth-loading">
+    <div class="loading-spinner"></div>
+    <span>Verificando acesso...</span>
+  </div>
+
+  <div id="admin-conteudo" hidden>
+
+    <header class="admin-header">
+      <div class="admin-header-info">
+        <a href="/admin/noticias" class="admin-voltar" aria-label="Voltar à lista de notícias">←</a>
+        <div>
+          <div class="admin-titulo" id="form-titulo-pagina">Nova Notícia</div>
+          <div class="admin-usuario" id="usuario-email">—</div>
+        </div>
+      </div>
+      <button id="btn-sair" class="btn-sair" type="button">Sair</button>
+    </header>
+
+    <main class="admin-main">
+
+      <!-- MODO FORMULÁRIO -->
+      <section id="modo-form">
+
+        <form id="form-noticia" novalidate>
+
+          <div class="campo">
+            <label for="titulo">Título <span class="obrigatorio">*</span></label>
+            <span class="ajuda">Texto que aparece como título da notícia</span>
+            <input type="text" id="titulo" name="titulo" maxlength="120" required>
+            <div class="contador-caracteres"><span id="contador-titulo">0</span>/120</div>
+          </div>
+
+          <div class="campo">
+            <label for="resumo">Resumo <span class="obrigatorio">*</span></label>
+            <span class="ajuda">Texto curto que aparece na lista de notícias (2-3 linhas)</span>
+            <textarea id="resumo" name="resumo" maxlength="250" rows="3" required></textarea>
+            <div class="contador-caracteres"><span id="contador-resumo">0</span>/250</div>
+          </div>
+
+          <div class="campo">
+            <label for="conteudo">Conteúdo completo <span class="obrigatorio">*</span></label>
+            <span class="ajuda">Texto que aparece quando o leitor clica para ler a notícia</span>
+            <textarea id="conteudo" name="conteudo" rows="10" required></textarea>
+          </div>
+
+          <div class="campo">
+            <label for="imagem_url">
+              URL da imagem
+              <button type="button" id="btn-ajuda-imagem" class="btn-ajuda" aria-label="Como hospedar imagem">?</button>
+            </label>
+            <span class="ajuda">Cole o endereço completo de uma imagem online (opcional)</span>
+            <input type="url" id="imagem_url" name="imagem_url" placeholder="https://...">
+
+            <!-- Caixa de ajuda escondida -->
+            <div id="ajuda-imagem-box" class="ajuda-box" hidden>
+              <strong>Como hospedar uma imagem gratuitamente:</strong>
+              <ol>
+                <li>Acesse <a href="https://imgbb.com" target="_blank" rel="noopener">imgbb.com</a></li>
+                <li>Clique em "Start uploading" e selecione a imagem do seu computador</li>
+                <li>Após o upload, clique em "Copy" no campo "Image link" (Direct link)</li>
+                <li>Cole o endereço aqui no campo URL da imagem</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="campo campo-checkbox">
+            <label class="checkbox-label">
+              <input type="checkbox" id="ativo" name="ativo" checked>
+              <span>Notícia ativa (visível no site público)</span>
+            </label>
+          </div>
+
+          <div id="erro-mensagem" class="aviso aviso-erro" hidden></div>
+          <div id="sucesso-mensagem" class="aviso aviso-seguro" hidden></div>
+
+          <div class="form-acoes">
+            <button type="button" id="btn-preview" class="btn btn-secundario">
+              👁️ Visualizar
+            </button>
+            <button type="submit" id="btn-salvar" class="btn btn-primario">
+              💾 Salvar
+            </button>
+            <a href="/admin/noticias" class="btn-cancelar">Cancelar</a>
+          </div>
+
+        </form>
+
+      </section>
+
+      <!-- MODO PREVIEW -->
+      <section id="modo-preview" hidden>
+
+        <div class="aviso-preview">
+          <strong>👁️ Modo Visualização</strong> — Veja como a notícia aparecerá no site público
+        </div>
+
+        <article class="noticia-detalhe">
+          <header class="noticia-detalhe-header">
+            <span class="noticia-data" id="preview-data"></span>
+            <h1 id="preview-titulo"></h1>
+          </header>
+
+          <div id="preview-imagem-container" class="noticia-detalhe-imagem" hidden>
+            <img id="preview-imagem" src="" alt="">
+          </div>
+
+          <div class="noticia-detalhe-conteudo" id="preview-conteudo"></div>
+        </article>
+
+        <div class="form-acoes">
+          <button type="button" id="btn-voltar-edicao" class="btn btn-secundario">
+            ← Voltar para edição
+          </button>
+          <button type="button" id="btn-salvar-do-preview" class="btn btn-primario">
+            💾 Salvar
+          </button>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <script type="module" src="/js/admin/noticia-form.js"></script>
+</body>
+</html>

@@ -3,16 +3,16 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // FAQ — leitura pública, escrita bloqueada (será liberada para admins na Fase 5)
+    // FAQ — leitura pública, escrita só para usuários autenticados
     match /faq/{documento} {
       allow read: if true;
-      allow write: if false;
+      allow write: if request.auth != null;
     }
 
-    // Notícias — leitura pública, escrita bloqueada (será liberada para admins na Fase 5)
+    // Notícias — leitura pública, escrita só para usuários autenticados
     match /noticias/{documento} {
       allow read: if true;
-      allow write: if false;
+      allow write: if request.auth != null;
     }
 
     // Bloqueia qualquer outra coleção por padrão
