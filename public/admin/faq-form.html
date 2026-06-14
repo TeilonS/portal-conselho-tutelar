@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Pergunta — Painel Administrativo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin-body">
+
+  <div id="auth-loading" class="auth-loading">
+    <div class="loading-spinner"></div>
+    <span>Verificando acesso...</span>
+  </div>
+
+  <div id="admin-conteudo" hidden>
+
+    <header class="admin-header">
+      <div class="admin-header-info">
+        <a href="/admin/faq" class="admin-voltar" aria-label="Voltar à lista de perguntas">←</a>
+        <div>
+          <div class="admin-titulo" id="form-titulo-pagina">Nova Pergunta</div>
+          <div class="admin-usuario" id="usuario-email">—</div>
+        </div>
+      </div>
+      <button id="btn-sair" class="btn-sair" type="button">Sair</button>
+    </header>
+
+    <main class="admin-main">
+
+      <form id="form-faq" novalidate>
+
+        <div class="campo">
+          <label for="pergunta">Pergunta <span class="obrigatorio">*</span></label>
+          <span class="ajuda">Texto curto da pergunta, como o usuário a leria</span>
+          <input type="text" id="pergunta" name="pergunta" maxlength="200" required>
+          <div class="contador-caracteres"><span id="contador-pergunta">0</span>/200</div>
+        </div>
+
+        <div class="campo">
+          <label for="resposta">Resposta <span class="obrigatorio">*</span></label>
+          <span class="ajuda">Texto da resposta. Use quebras de linha para separar parágrafos.</span>
+          <textarea id="resposta" name="resposta" rows="8" required></textarea>
+        </div>
+
+        <div class="campo">
+          <label for="ordem">Ordem de exibição <span class="obrigatorio">*</span></label>
+          <span class="ajuda">Posição da pergunta na lista (1 = primeira, 2 = segunda, e assim por diante)</span>
+          <input type="number" id="ordem" name="ordem" min="1" max="999" required>
+        </div>
+
+        <div class="campo campo-checkbox">
+          <label class="checkbox-label">
+            <input type="checkbox" id="ativo" name="ativo" checked>
+            <span>Pergunta ativa (visível no site público)</span>
+          </label>
+        </div>
+
+        <div id="erro-mensagem" class="aviso aviso-erro" hidden></div>
+        <div id="sucesso-mensagem" class="aviso aviso-seguro" hidden></div>
+
+        <div class="form-acoes">
+          <button type="submit" id="btn-salvar" class="btn btn-primario">
+            💾 Salvar
+          </button>
+          <a href="/admin/faq" class="btn-cancelar">Cancelar</a>
+        </div>
+
+      </form>
+
+    </main>
+
+  </div>
+
+  <script type="module" src="/js/admin/faq-form.js"></script>
+</body>
+</html>
