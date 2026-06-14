@@ -1,0 +1,298 @@
+/* ============================================
+   Painel Administrativo
+   ============================================ */
+
+.admin-body {
+  background: var(--creme);
+  min-height: 100vh;
+}
+
+/* ============================================
+   LOGIN
+   ============================================ */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+  background: linear-gradient(135deg, var(--azul-profundo) 0%, #2A5F95 100%);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--branco);
+  border-radius: 20px;
+  padding: 32px 28px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.2);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.login-logo {
+  width: 64px;
+  height: 64px;
+  background: var(--laranja);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.login-logo img {
+  width: 36px;
+  height: 36px;
+  display: block;
+}
+
+.login-header h1 {
+  font-size: 22px;
+  color: var(--azul-profundo);
+  margin-bottom: 6px;
+}
+
+.login-header p {
+  font-size: 14px;
+  color: var(--texto-suave);
+}
+
+.login-form {
+  margin-bottom: 20px;
+}
+
+.login-form .campo {
+  margin-bottom: 18px;
+}
+
+.login-form button {
+  margin-top: 8px;
+}
+
+.login-rodape {
+  text-align: center;
+  padding-top: 18px;
+  border-top: 1px solid var(--borda);
+}
+
+.voltar-site {
+  font-size: 13px;
+  color: var(--texto-suave);
+  text-decoration: none;
+}
+
+.voltar-site:hover {
+  color: var(--azul-claro);
+}
+
+/* ============================================
+   DASHBOARD
+   ============================================ */
+.auth-loading {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: var(--creme);
+  color: var(--texto-suave);
+  font-size: 14px;
+}
+
+/* HEADER */
+.admin-header {
+  background: var(--azul-profundo);
+  color: var(--branco);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 8px 24px rgba(15, 44, 89, 0.10);
+}
+
+.admin-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex: 1;
+}
+
+.admin-header .header-logo {
+  width: 40px;
+  height: 40px;
+  background: var(--laranja);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.admin-header .header-logo img {
+  width: 24px;
+  height: 24px;
+}
+
+.admin-titulo {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.admin-usuario {
+  font-size: 12px;
+  opacity: 0.75;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-sair {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--branco);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 9px 18px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--fonte-corpo);
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+
+.btn-sair:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* MAIN */
+.admin-main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+.admin-secao {
+  margin-bottom: 24px;
+}
+
+.admin-secao h1 {
+  font-size: 26px;
+  color: var(--azul-profundo);
+  margin-bottom: 6px;
+}
+
+.admin-secao h3 {
+  font-size: 16px;
+  color: var(--azul-profundo);
+  margin-bottom: 8px;
+}
+
+.admin-secao p {
+  font-size: 14px;
+  color: var(--texto-suave);
+  margin-bottom: 14px;
+}
+
+/* CARDS */
+.admin-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.admin-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.admin-card:hover, .admin-card:focus-visible {
+  border-color: var(--laranja);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(231, 111, 0, 0.12);
+}
+
+.admin-card-icone {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  background: var(--laranja-suave);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.admin-card-conteudo {
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-card-conteudo h2 {
+  font-size: 17px;
+  color: var(--azul-profundo);
+  margin-bottom: 4px;
+}
+
+.admin-card-conteudo p {
+  font-size: 13px;
+  color: var(--texto-suave);
+  margin: 0;
+}
+
+.admin-card-seta {
+  font-size: 28px;
+  color: var(--azul-claro);
+  flex-shrink: 0;
+}
+
+.admin-info {
+  padding: 20px;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+}
+
+.admin-info .btn {
+  width: auto;
+  display: inline-flex;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .admin-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .login-card {
+    padding: 40px 36px;
+  }
+}
+
+/* Garante que o atributo hidden funcione com Flexbox */
+[hidden] {
+  display: none !important;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Painel — Conselhos Tutelares VCA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- Loading inicial enquanto verifica autenticação -->
+  <div id="auth-loading" class="auth-loading">
+    <div class="loading-spinner"></div>
+    <span>Verificando acesso...</span>
+  </div>
+
+  <!-- Conteúdo do painel (escondido até verificar auth) -->
+  <div id="admin-conteudo" hidden>
+
+    <header class="admin-header">
+      <div class="admin-header-info">
+        <div class="header-logo" aria-hidden="true">
+          <img src="/img/logo-mao.svg" alt="">
+        </div>
+        <div>
+          <div class="admin-titulo">Painel Administrativo</div>
+          <div class="admin-usuario" id="usuario-email">—</div>
+        </div>
+      </div>
+      <button id="btn-sair" class="btn-sair" type="button">
+        Sair
+      </button>
+    </header>
+
+    <main class="admin-main">
+
+      <section class="admin-secao">
+        <h1>Bem-vindo</h1>
+        <p>O que você gostaria de gerenciar hoje?</p>
+      </section>
+
+      <section class="admin-cards">
+
+        <a href="/admin/noticias" class="admin-card">
+          <div class="admin-card-icone" aria-hidden="true">📰</div>
+          <div class="admin-card-conteudo">
+            <h2>Notícias e Campanhas</h2>
+            <p>Publique, edite ou desative notícias do site</p>
+          </div>
+          <span class="admin-card-seta" aria-hidden="true">›</span>
+        </a>
+
+        <a href="/admin/faq" class="admin-card">
+          <div class="admin-card-icone" aria-hidden="true">💬</div>
+          <div class="admin-card-conteudo">
+            <h2>Perguntas Frequentes</h2>
+            <p>Gerencie as perguntas e respostas da página de FAQ</p>
+          </div>
+          <span class="admin-card-seta" aria-hidden="true">›</span>
+        </a>
+
+      </section>
+
+      <section class="admin-secao admin-info">
+        <h3>Site público</h3>
+        <p>Veja como o site aparece para o público em geral.</p>
+        <a href="/" target="_blank" rel="noopener" class="btn btn-secundario">
+          🌐 Abrir site público
+        </a>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script type="module" src="/js/admin/dashboard.js"></script>
+</body>
+</html>
