@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Como entrar em contato com os Conselhos Tutelares de Vitória da Conquista. Endereço, telefones por zona e mapa de localização.">
+  <meta name="description" content="Como entrar em contato com os Conselhos Tutelares de Vitória da Conquista. Endereços, telefones por zona e mapa de localização.">
   <title>Contato — Conselhos Tutelares VCA</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
 
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/contato.css">
@@ -45,16 +46,16 @@
     <section class="section-header">
       <a href="/" class="voltar">← Voltar ao início</a>
       <h1>Contato</h1>
-      <p>Encontre o Conselho Tutelar da sua região ou visite a sede da coordenação no CIDCA.</p>
+      <p>Encontre o Conselho Tutelar da sua região ou visite a sede da coordenação.</p>
     </section>
 
     <!-- COORDENAÇÃO / CIDCA -->
     <section class="secao">
       <div class="cidca-card">
         <div class="cidca-titulo">
-          <span class="cidca-tag">Sede da coordenação</span>
-          <h2>CIDCA</h2>
-          <p>Centro Integrado dos Direitos da Criança e do Adolescente</p>
+          <span class="cidca-tag">Coordenação</span>
+          <h2>Centro Integrado dos Direitos da Criança e do Adolescente</h2>
+          <p>Primeiro equipamento dessa natureza implantado no Brasil, o Centro Integrado dos Direitos da Criança e do Adolescente reúne todos os serviços socioassistenciais e jurídicos num único endereço.</p>
         </div>
 
         <div class="cidca-info">
@@ -74,32 +75,10 @@
               <span>Segunda a Sexta — 8h às 18h</span>
             </div>
           </div>
-
-          <div class="info-linha">
-            <span class="info-icone" aria-hidden="true">🤝</span>
-            <div>
-              <strong>Em parceria com</strong>
-              <span>Rede de Atenção e Defesa dos Direitos da Criança e do Adolescente</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mapa Google embed -->
-        <div class="mapa-container">
-          <iframe
-            src="https://www.google.com/maps?q=Rua+Sifredo+Pedral+Sampaio,+790,+Recreio,+Vit%C3%B3ria+da+Conquista,+BA&output=embed"
-            width="100%"
-            height="320"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Mapa da localização do CIDCA">
-          </iframe>
         </div>
 
         <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Sifredo+Pedral+Sampaio,+790,+Recreio,+Vit%C3%B3ria+da+Conquista,+BA" target="_blank" rel="noopener" class="btn btn-secundario btn-rotas">
-          🧭 Traçar rota até o CIDCA
+          🧭 Traçar rota até a Coordenação
         </a>
       </div>
     </section>
@@ -107,32 +86,64 @@
     <!-- CONSELHOS POR ZONA -->
     <section class="secao secao-canais">
       <h2>Conselhos Tutelares por zona</h2>
-      <p class="canais-intro">Cada zona da cidade tem seu próprio Conselho Tutelar. Identifique a zona da sua região para contato direto.</p>
+      <p class="canais-intro">Cada zona da cidade tem seu próprio Conselho Tutelar. Identifique a zona da sua região no mapa abaixo.</p>
+
+      <!-- Mapa com pinos das sedes -->
+      <div class="mapa-container">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1IwNT1JMg4gSRXkV-fbId9wQQi3Pl4gA&ehbc=2E312F" width="100%" height="100%" style="border:0;" loading="lazy" title="Mapa das sedes dos Conselhos Tutelares"></iframe>
+      </div>
 
       <div class="canal-lista">
         <div class="canal-item">
           <div class="canal-zona">Zona 01</div>
+          <div class="canal-bairros"><strong>Bairros:</strong> Bateias, Brasil, Distrito Industrial, Ibirapuera, Nossa Senhora Aparecida, São Pedro e Zabelê</div>
+          <div class="canal-endereco">
+            <span class="canal-endereco-icone" aria-hidden="true">📍</span>
+            <span>Avenida Itabuna, 2109 — Brasil</span>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Avenida+Itabuna,+2109,+Brasil,+Vit%C3%B3ria+da+Conquista,+BA" target="_blank" rel="noopener" class="canal-rota">Ver rota</a>
+          </div>
           <div class="canal-telefones">
             <a href="tel:7732293264">(77) 3229-3264</a>
             <a href="tel:77988563303">(77) 98856-3303</a>
           </div>
         </div>
+
         <div class="canal-item">
           <div class="canal-zona">Zona 02</div>
+          <div class="canal-bairros"><strong>Bairros:</strong> Alto Maron, Candeias, Centro, Cruzeiro, Guarani, Lagoa das Flores, Primavera e Universidade</div>
+          <div class="canal-endereco">
+            <span class="canal-endereco-icone" aria-hidden="true">📍</span>
+            <span>Rua Sifredo Pedral Sampaio, 790 — Recreio (CIDCA)</span>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Sifredo+Pedral+Sampaio,+790,+Recreio,+Vit%C3%B3ria+da+Conquista,+BA" target="_blank" rel="noopener" class="canal-rota">Ver rota</a>
+          </div>
           <div class="canal-telefones">
             <a href="tel:7732293271">(77) 3229-3271</a>
             <a href="tel:77988793351">(77) 98879-3351</a>
           </div>
         </div>
+
         <div class="canal-item">
           <div class="canal-zona">Zona 03</div>
+          <div class="canal-bairros"><strong>Bairros:</strong> Ayrton Senna, Boa Vista, Campinhos, Espírito Santo, Felícia, Jatobá, Jurema, Patagônia e Recreio</div>
+          <div class="canal-endereco">
+            <span class="canal-endereco-icone" aria-hidden="true">📍</span>
+            <span>Rua Cristalina, 367 — Felícia</span>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Cristalina,+367,+Fel%C3%ADcia,+Vit%C3%B3ria+da+Conquista,+BA" target="_blank" rel="noopener" class="canal-rota">Ver rota</a>
+          </div>
           <div class="canal-telefones">
             <a href="tel:7732293306">(77) 3229-3306</a>
             <a href="tel:77988346677">(77) 98834-6677</a>
           </div>
         </div>
+
         <div class="canal-item">
           <div class="canal-zona">Zona Rural</div>
+          <div class="canal-bairros"><strong>Áreas:</strong> Zona Rural e demais localidades não contempladas pelos outros Conselhos Tutelares, incluindo distritos e subdistritos</div>
+          <div class="canal-endereco">
+            <span class="canal-endereco-icone" aria-hidden="true">📍</span>
+            <span>Rua Sifredo Pedral Sampaio, 790 — Recreio (CIDCA)</span>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Sifredo+Pedral+Sampaio,+790,+Recreio,+Vit%C3%B3ria+da+Conquista,+BA" target="_blank" rel="noopener" class="canal-rota">Ver rota</a>
+          </div>
           <div class="canal-telefones">
             <a href="tel:7732293270">(77) 3229-3270</a>
             <a href="tel:77988562987">(77) 98856-2987</a>
@@ -158,10 +169,6 @@
   <footer class="rodape">
     <strong>Conselhos Tutelares de Vitória da Conquista</strong>
     <div class="rodape-linha">
-      <div class="label">Em parceria com</div>
-      <div>Rede de Atenção e Defesa dos Direitos da Criança e do Adolescente</div>
-    </div>
-    <div class="rodape-linha">
       <div class="label">Disque Denúncia Nacional</div>
       <div><a href="tel:100">100</a> — Disque Direitos Humanos</div>
     </div>
@@ -169,6 +176,7 @@
       Projeto de Extensão Universitária — Uniasselvi
     </div>
   </footer>
+
 
   <script>
     const abrirMenu = document.getElementById('abrirMenu');
